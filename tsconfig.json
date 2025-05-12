@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",               // Soporte moderno de JS
+    "module": "NodeNext",             // Recomendado para Node.js moderno
+    "lib": ["ES2022", "DOM"],                // Todas las nuevas funciones, incluyendo Promise
+    "moduleResolution": "NodeNext",  // Para manejar imports/export modernos
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "resolveJsonModule": true,        // Si importas JSON
+    "experimentalDecorators": true,   // Necesario para Sequelize con decoradores
+    "emitDecoratorMetadata": true,     // Igual, requerido por sequelize-typescript
+    "typeRoots": ["./node_modules/@types", "./src/types"]
+  },
+  "include": [
+    "src/**/*",
+    "src/express.d.ts"  
+  ],
+  "exclude": ["node_modules", "dist"]
+}
